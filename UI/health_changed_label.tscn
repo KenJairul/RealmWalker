@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://jbjxrc0ufytm"]
+
+[ext_resource type="Script" path="res://UI/health_changed_label.gd" id="1_bslcb"]
+[ext_resource type="FontFile" uid="uid://5fijd3bku2qp" path="res://UI/Dialogue/GreybeardBold.ttf" id="1_cf22e"]
+
+[node name="HealthChangedLabel" type="Label"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_cf22e")
+text = "1000"
+script = ExtResource("1_bslcb")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

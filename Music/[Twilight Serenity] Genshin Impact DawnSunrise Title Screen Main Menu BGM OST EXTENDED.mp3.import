@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxnxwtprydk3t"
+path="res://.godot/imported/[Twilight Serenity] Genshin Impact DawnSunrise Title Screen Main Menu BGM OST EXTENDED.mp3-95be15d66bfee0ee822c83156565acd7.mp3str"
+
+[deps]
+
+source_file="res://Music/[Twilight Serenity] Genshin Impact DawnSunrise Title Screen Main Menu BGM OST EXTENDED.mp3"
+dest_files=["res://.godot/imported/[Twilight Serenity] Genshin Impact DawnSunrise Title Screen Main Menu BGM OST EXTENDED.mp3-95be15d66bfee0ee822c83156565acd7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

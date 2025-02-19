@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dm0iq483k1eh2"
+path="res://.godot/imported/Zangarmarsh Music.mp3-6deccbe40d8eb9552a789c1ae13472ed.mp3str"
+
+[deps]
+
+source_file="res://Music/Zangarmarsh Music.mp3"
+dest_files=["res://.godot/imported/Zangarmarsh Music.mp3-6deccbe40d8eb9552a789c1ae13472ed.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

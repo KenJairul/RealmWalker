@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://pjej281orick"]
+
+[ext_resource type="Script" path="res://UI/menu.gd" id="1_dek1u"]
+[ext_resource type="Texture2D" uid="uid://j1ch088edeah" path="res://Art/1291921.jpg" id="2_k12q1"]
+[ext_resource type="FontFile" uid="uid://5fijd3bku2qp" path="res://UI/Dialogue/GreybeardBold.ttf" id="2_ua3i3"]
+[ext_resource type="Texture2D" uid="uid://by21m20fb6d5p" path="res://Art/text-1687630457001.png" id="3_05g73"]
+[ext_resource type="AudioStream" uid="uid://dxnxwtprydk3t" path="res://Music/[Twilight Serenity] Genshin Impact DawnSunrise Title Screen Main Menu BGM OST EXTENDED.mp3" id="5_ggt0g"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dek1u")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -417.0
+offset_top = -369.0
+offset_right = 720.0
+offset_bottom = 430.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_k12q1")
+expand_mode = 1
+
+[node name="Text-1687630457001" type="Sprite2D" parent="."]
+position = Vector2(291, 151)
+texture = ExtResource("3_05g73")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = -98.0
+offset_right = 120.0
+offset_bottom = -30.0
+grow_vertical = 0
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.705882, 0.705882, 0, 1)
+theme_override_fonts/font = ExtResource("2_ua3i3")
+text = "Start"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.705882, 0.705882, 0, 1)
+theme_override_fonts/font = ExtResource("2_ua3i3")
+text = "Quit"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ggt0g")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

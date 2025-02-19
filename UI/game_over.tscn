@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://iud3rourpryi"]
+
+[ext_resource type="Script" path="res://UI/game_over.gd" id="1_oy0tv"]
+[ext_resource type="FontFile" uid="uid://5fijd3bku2qp" path="res://UI/Dialogue/GreybeardBold.ttf" id="2_7tsgl"]
+[ext_resource type="AudioStream" uid="uid://d08sfn30wgecs" path="res://Music/[Dream Aria] Genshin Impact NighttimeEvening Title Screen Main Menu BGM OST EXTENDED.mp3" id="3_6e6qr"]
+
+[node name="Game Over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00157, 1.01478)
+script = ExtResource("1_oy0tv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 60.0
+offset_top = -98.0
+offset_right = 201.0
+offset_bottom = -32.0
+grow_vertical = 0
+
+[node name="Restart" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 0.164706, 1)
+theme_override_fonts/font = ExtResource("2_7tsgl")
+text = "Restart Game"
+
+[node name="Main Menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_hover_color = Color(1, 1, 0.164706, 1)
+theme_override_fonts/font = ExtResource("2_7tsgl")
+text = "  Go to Main Menu  "
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 76.8793
+offset_top = 88.6892
+offset_right = 489.879
+offset_bottom = 200.689
+theme_override_colors/default_color = Color(0.364706, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_7tsgl")
+theme_override_font_sizes/normal_font_size = 100
+text = "YOU DIED"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_6e6qr")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
